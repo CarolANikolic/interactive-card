@@ -1,0 +1,83 @@
+/* Reset Page Default Styles */
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Page Structure */
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Card Section Style */
+.card-section {
+    background-image: url("./public/images/bg-main-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    height: 250px;
+    width: 100%;
+}
+
+.card-section__containerCard {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0 ;
+    text-align: right;
+    width: 100%;
+}
+
+/* Card Images Styles */
+.containerCard__cardBackImg, 
+.containerCard__cardFrontImg {
+    padding: 0 1rem;
+    width: 80%;
+}
+
+/* Back Card Image Style */
+.containerCard__cardBackImg {
+    align-self: flex-end;
+    position: relative;
+    z-index: 1;
+}
+
+/* Front Card Image Styles */
+.containerCard__cardFrontImg {
+    align-self: flex-start;
+    position: absolute;
+    left: 0;
+    top: 15%;
+    z-index: 2;
+}
+
+/* Style for Galaxy S9+ */
+@media 
+only screen and (-webkit-min-device-pixel-ratio: 4),
+only screen and (min--moz-device-pixel-ratio: 4),
+only screen and (-o-min-device-pixel-ratio: 4/1),
+only screen and (min-device-pixel-ratio: 4),
+only screen and (min-resolution: 570dpi),
+only screen and (min-resolution: 4dppx) {
+
+    .card-section {
+        height: 200px; 
+    }
+
+    .card-section__containerCard {
+        padding: 1.5rem 0 1rem 0;
+    }
+
+    .containerCard__cardFrontImg {
+        top: 16%;
+    }
+}
+
+/* Style for iPhone SE */
+@media screen and (width: 375px) and (height: 667px) {
+    .containerCard__cardFrontImg {
+        top: 18%;
+    }
+}
