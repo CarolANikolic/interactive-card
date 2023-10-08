@@ -1,15 +1,30 @@
+:root {
+/* Neutral Colors */
+--white: #FFFFFF;
+--light-grayish: #DEDDDF;
+--dark-grayish: #8E8593;
+--very-dark-violet: #21092F;
+
+/* Active State Colors */
+--linear-gradient: linear-gradient(90deg, rgba(100,72,254,1) 0%, rgba(96,5,148,1) 77%);
+--red: #FF5252;
+}
+
 /* Reset Page Default Styles */
 html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background-color: #8E8593;
 }
 
 /* Page Structure */
 main {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: 2px;
 }
 
 /* Card Section Style */
@@ -18,66 +33,48 @@ main {
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    height: 250px;
-    width: 100%;
-}
-
-.card-section__containerCard {
-    display: flex;
     flex-direction: column;
-    padding: 1.5rem 0 ;
     text-align: right;
-    width: 100%;
 }
 
-/* Card Images Styles */
-.containerCard__cardBackImg, 
-.containerCard__cardFrontImg {
-    padding: 0 1rem;
-    width: 80%;
-}
-
-/* Back Card Image Style */
-.containerCard__cardBackImg {
-    align-self: flex-end;
+.cardContainerBack,
+.cardContainerFront {
     position: relative;
-    z-index: 1;
+    width: min-content;
+    color: var(--white);
 }
 
-/* Front Card Image Styles */
-.containerCard__cardFrontImg {
-    align-self: flex-start;
+.cardContainerBack > *:not(.cardContainerBack__bgImg),
+.cardContainerFront > *:not(.cardContainerFront__bgImg) {
     position: absolute;
-    left: 0;
-    top: 15%;
-    z-index: 2;
 }
 
-/* Style for Galaxy S9+ */
-@media 
-only screen and (-webkit-min-device-pixel-ratio: 4),
-only screen and (min--moz-device-pixel-ratio: 4),
-only screen and (-o-min-device-pixel-ratio: 4/1),
-only screen and (min-device-pixel-ratio: 4),
-only screen and (min-resolution: 570dpi),
-only screen and (min-resolution: 4dppx) {
-
-    .card-section {
-        height: 200px; 
-    }
-
-    .card-section__containerCard {
-        padding: 1.5rem 0 1rem 0;
-    }
-
-    .containerCard__cardFrontImg {
-        top: 16%;
-    }
+.cardContainerFront {
+    --card-padding: 2rem;
 }
 
-/* Style for iPhone SE */
-@media screen and (width: 375px) and (height: 667px) {
-    .containerCard__cardFrontImg {
-        top: 18%;
-    }
+.cardContainerBack__cvc {
+    top: 45%;
+    right: 15%;
+}
+
+.cardContainerFront__logo {
+    left: var(--card-padding);
+    top: var(--card-padding);
+}
+
+.cardContainerFront__number {
+    font-size: 1.8rem;
+    left: var(--card-padding);
+    top: 55%;
+}
+
+.cardContainerFront__name {
+    left: var(--card-padding);
+    top: 80%;
+}
+
+.cardContainerFront__date {
+    right: var(--card-padding);
+    top: 80%;
 }

@@ -4,15 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="global.css"/>
     <title>Interactive Card</title>
 </head>
 <body>
     <main>
         <section class="card-section">
-            <div class="card-section__containerCard">
-                <img class="containerCard__cardBackImg" src="./public/images/bg-card-back.png" alt="back of the card">
-                <img class="containerCard__cardFrontImg" src="./public/images/bg-card-front.png" alt="front of the card">
+            <div class="cardContainerBack">
+                <img class="cardContainerBack__bgImg" src="./public/images/bg-card-back.png" alt="back of the card">
+                <span class="cardContainerBack__cvc">000</span>
+            </div>
+        
+            <div class="cardContainerFront">
+                <img class="cardContainerFront__bgImg" src="./public/images/bg-card-front.png" alt="front of the card">
+                <img class="cardContainerFront__logo" src="./public/images/card-logo.svg" alt="card logo">
+                <span class="cardContainerFront__number">0000 0000 0000 0000</span>
+                <span class="cardContainerFront__name">Jane Appleseed</span>
+                <span class="cardContainerFront__date">00/00</span>
             </div>
         </section>
     </main>
