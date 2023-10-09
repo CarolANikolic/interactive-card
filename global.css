@@ -85,7 +85,6 @@ img {
 }
 
 .cardContainerFront__number {
-    font-size: 1rem;
     left: var(--card-padding);
     top: 55%;
 }
@@ -98,4 +97,68 @@ img {
 .cardContainerFront__date {
     right: var(--card-padding);
     top: 80%;
+}
+
+@media screen and (min-width:400px) {
+    .cardContainerFront {
+        left: 15%;
+    }
+    
+    .cardContainerBack {
+        left: 20%;
+    }
+}
+
+@media screen and (min-width:500px) {
+    .card-section {
+        height: 300px;
+    }
+
+    .cardContainerBack__bgImg,
+    .cardContainerFront__bgImg {
+        width: 400px;
+    }
+
+    .cardContainerFront {
+        top: 50%;
+    }
+    
+    .cardContainerBack {
+        left: 10%;
+    }
+
+    .cardContainerFront__number {
+        font-size: 1.5rem;
+    }
+
+    .cardContainerFront__name,
+    .cardContainerFront__date,
+    .cardContainerBack__cvc {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .card-section {
+        height: 350px;
+    }
+
+    .cardContainerBack__bgImg,
+    .cardContainerFront__bgImg {
+        width: 500px;
+    }
+
+    .cardContainerFront {
+        top: 55%;
+    }
+
+    .cardContainerFront__number {
+        font-size: 2rem;
+    }
+
+    .cardContainerFront__name,
+    .cardContainerFront__date,
+    .cardContainerBack__cvc {
+        font-size: 1.5rem;
+    }
 }
