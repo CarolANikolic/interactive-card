@@ -25,6 +25,7 @@ main {
     font-family: 'Roboto', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 2px;
+    width: 100%;
 }
 
 /* Card Section Style */
@@ -34,12 +35,13 @@ main {
     background-size: cover;
     display: flex;
     flex-direction: column;
-    text-align: right;
+    position: relative;
+    height: 250px;
 }
 
 .cardContainerBack,
 .cardContainerFront {
-    position: relative;
+    position: absolute;
     width: min-content;
     color: var(--white);
 }
@@ -50,7 +52,26 @@ main {
 }
 
 .cardContainerFront {
-    --card-padding: 2rem;
+    --card-padding: 1rem;
+    z-index: 2;
+    top: 45%;
+    left: 5%;
+}
+
+.cardContainerBack {
+    top: 5%;
+    left: 10%;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.cardContainerBack__bgImg,
+.cardContainerFront__bgImg {
+    width: 300px;
+    max-width: revert;
 }
 
 .cardContainerBack__cvc {
@@ -64,7 +85,7 @@ main {
 }
 
 .cardContainerFront__number {
-    font-size: 1.8rem;
+    font-size: 1rem;
     left: var(--card-padding);
     top: 55%;
 }
