@@ -15,7 +15,6 @@ html, body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #8E8593;
 }
 
 /* Page Structure */
@@ -26,6 +25,11 @@ main {
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 2px;
     width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 30px;
+    height: 100vh;
+    width: 100vw;
 }
 
 /* Card Section Style */
@@ -33,10 +37,9 @@ main {
     background-image: url("./public/images/bg-main-mobile.png");
     background-repeat: no-repeat;
     background-size: cover;
-    display: flex;
-    flex-direction: column;
     position: relative;
-    height: 250px;
+    height: 60%;
+    width: 100%;
 }
 
 .cardContainerBack,
@@ -110,17 +113,13 @@ img {
 }
 
 @media screen and (min-width:500px) {
-    .card-section {
-        height: 300px;
-    }
-
     .cardContainerBack__bgImg,
     .cardContainerFront__bgImg {
         width: 400px;
     }
 
     .cardContainerFront {
-        top: 50%;
+        top: 60%;
     }
     
     .cardContainerBack {
@@ -139,17 +138,13 @@ img {
 }
 
 @media screen and (min-width:600px) {
-    .card-section {
-        height: 350px;
-    }
-
     .cardContainerBack__bgImg,
     .cardContainerFront__bgImg {
         width: 500px;
     }
 
     .cardContainerFront {
-        top: 55%;
+        top: 70%;
     }
 
     .cardContainerFront__number {
@@ -161,4 +156,75 @@ img {
     .cardContainerBack__cvc {
         font-size: 1.5rem;
     }
+}
+
+@media screen and (min-width:750px) {
+    main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card-section {
+        background-image: url("./public/images/bg-main-desktop.png");
+        height: 100%;
+        width: 60%;
+    }
+
+    .cardContainerBack,
+    .cardContainerFront {
+        position: relative;
+    }
+
+    .cardContainerBack {
+        top: 50%;
+        left: 50%; 
+    }
+
+    .cardContainerFront {
+        z-index: 1;
+        top: 10%;
+        left: 20%;
+    } 
+
+    .cardContainerBack__bgImg,
+    .cardContainerFront__bgImg {
+        width: 300px;
+    }
+
+    .cardContainerFront__number {
+        font-size: 1rem;
+    }
+
+    .cardContainerFront__name,
+    .cardContainerFront__date,
+    .cardContainerBack__cvc {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:1024px) {
+
+    .cardContainerBack {
+        top: 50%;
+        left: 45%; 
+    }
+
+    .cardContainerFront {
+        top: -10%;
+        left: 20%
+    }
+
+    .cardContainerBack__bgImg,
+    .cardContainerFront__bgImg {
+        width: auto;
+    }
+
+    .cardContainerFront__number {
+        font-size: 1.5rem;
+    }
+
+    .cardContainerFront__name,
+    .cardContainerFront__date,
+    .cardContainerBack__cvc {
+        font-size: 1.3rem;
+    } 
 }
