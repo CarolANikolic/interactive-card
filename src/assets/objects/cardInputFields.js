@@ -1,6 +1,6 @@
 const cardInputFields = [
     {
-        labelName: "Cardholder name",
+        label: "Cardholder name",
         placeholder: "Jane Appleseed",
         value: "",
         validation: /^[A-Za-z\s.'-]+$/,
@@ -8,7 +8,7 @@ const cardInputFields = [
     },
 
     {
-        labelCardNumber: "Card number",
+        label: "Card number",
         placeholder: "1234 5678 9123 0000",
         value: "",
         validation: /^\d{16}$/,
@@ -16,7 +16,7 @@ const cardInputFields = [
     },
     
     {
-        labelDate: "Exp. Date (mm/yy)",
+        label: "Exp. Date (mm/yy)",
         placeholder: "mm",
         value: "",
         validation: /^(0[1-9]|1[0-2])$/,
@@ -31,7 +31,7 @@ const cardInputFields = [
     },
 
     {
-        labelCVC: "cvc",
+        label: "cvc",
         placeholder: "e.g. 123",
         value: "",
         validation: /^[0-9]{3}$/,
