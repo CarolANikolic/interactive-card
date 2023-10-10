@@ -205,11 +205,11 @@ img {
 
     .cardContainerBack {
         top: 50%;
-        left: 45%; 
+        left: 40%; 
     }
 
     .cardContainerFront {
-        top: -10%;
+        top: -15%;
         left: 20%
     }
 
@@ -219,12 +219,12 @@ img {
     }
 
     .cardContainerFront__number {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .cardContainerFront__name,
     .cardContainerFront__date,
     .cardContainerBack__cvc {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     } 
 }
