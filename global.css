@@ -57,7 +57,7 @@ main {
 .cardContainerFront {
     --card-padding: 1rem;
     z-index: 2;
-    top: 45%;
+    top: 50%;
     left: 5%;
 }
 
@@ -102,63 +102,49 @@ img {
     top: 80%;
 }
 
-@media screen and (min-width:400px) {
+/* Styles for iPhone 6/7/8 and SE */
+@media only screen and (device-width: 375px)
+        and (device-height: 667px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+
     .cardContainerFront {
-        left: 15%;
-    }
-    
-    .cardContainerBack {
-        left: 20%;
+        top: 65%;
     }
 }
 
 @media screen and (min-width:500px) {
-    .cardContainerBack__bgImg,
-    .cardContainerFront__bgImg {
-        width: 400px;
-    }
-
     .cardContainerFront {
-        top: 60%;
+        left: 20%;
+        top: 50%;
     }
     
     .cardContainerBack {
-        left: 10%;
-    }
-
-    .cardContainerFront__number {
-        font-size: 1.5rem;
-    }
-
-    .cardContainerFront__name,
-    .cardContainerFront__date,
-    .cardContainerBack__cvc {
-        font-size: 1.3rem;
+        left: 30%;
     }
 }
 
-@media screen and (min-width:600px) {
-    .cardContainerBack__bgImg,
-    .cardContainerFront__bgImg {
-        width: 500px;
-    }
+/* Styles for iPad and iPad Mini */
+@media only screen and (min-width:500px)
+        and (device-height: 1024px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
 
     .cardContainerFront {
-        top: 70%;
-    }
-
-    .cardContainerFront__number {
-        font-size: 2rem;
-    }
-
-    .cardContainerFront__name,
-    .cardContainerFront__date,
-    .cardContainerBack__cvc {
-        font-size: 1.5rem;
+        top: 45%;
     }
 }
 
-@media screen and (min-width:750px) {
+/* Styles for iPad Air */
+@media only screen and (device-width:820px)
+        and (device-height: 1180px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+
+    .cardContainerFront {
+        top: 35%;
+    }
+}
+
+/* Styles for large screens */
+@media screen and (min-width:1024px) {
     main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -169,48 +155,16 @@ img {
         width: 60%;
     }
 
-    .cardContainerBack,
-    .cardContainerFront {
-        position: relative;
-    }
-
-    .cardContainerBack {
-        top: 50%;
-        left: 50%; 
-    }
-
-    .cardContainerFront {
-        z-index: 1;
-        top: 10%;
-        left: 20%;
-    } 
-
-    .cardContainerBack__bgImg,
-    .cardContainerFront__bgImg {
-        width: 300px;
-    }
-
-    .cardContainerFront__number {
-        font-size: 1rem;
-    }
-
-    .cardContainerFront__name,
-    .cardContainerFront__date,
-    .cardContainerBack__cvc {
-        font-size: 1rem;
-    }
-}
-
-@media screen and (min-width:1024px) {
-
     .cardContainerBack {
         top: 50%;
         left: 40%; 
+        position: absolute;
     }
 
     .cardContainerFront {
-        top: -15%;
-        left: 20%
+        top: 15%;
+        left: 20%;
+        position: relative;
     }
 
     .cardContainerBack__bgImg,
@@ -227,4 +181,29 @@ img {
     .cardContainerBack__cvc {
         font-size: 1.5rem;
     } 
+}
+
+/* Styles for iPad Pro */
+@media only screen and (device-width:1024px)
+        and (device-height: 1366px) 
+        and (-webkit-min-device-pixel-ratio: 2) {
+        
+        main {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        .card-section {
+            height: 60%;
+            width: 100%;
+        }
+
+        .cardContainerFront {
+            top: 40%;
+            left: 20%;
+        }
+
+        .cardContainerBack {
+            top: 5%;
+            left: 30%;
+        }    
 }
