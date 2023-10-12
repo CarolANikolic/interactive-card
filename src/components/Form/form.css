@@ -1,0 +1,49 @@
+.allInputsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin: 0 auto;
+    width: 80%;
+    gap: 10px;
+}
+
+.inpuItemContainer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 5px;
+}
+
+.inpuItemContainer:nth-child(1),
+.inpuItemContainer:nth-child(2) {
+    grid-column: span 3;
+}
+
+.inpuItemContainer:nth-child(3) label {
+    white-space: nowrap; 
+} 
+
+.inpuItemContainer:nth-child(4) label {
+    display: none;
+} 
+
+.inpuItemContainer:nth-child(4) input {
+    grid-row-start: 2;
+} 
+
+.inpuItemContainer:last-child label {
+    align-self: flex-end;
+}
+
+/* Styles for medium and large screens */
+@media only screen and (min-width:500px) {
+        
+    .allInputsContainer {
+        width: 60%;
+        gap: 20px;
+    }
+}
+
+
+
+
+

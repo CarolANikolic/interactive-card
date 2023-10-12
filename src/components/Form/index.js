@@ -1,19 +1,23 @@
 const Form = (inputArray) => {
     const form = $('<form>');
-    const inputContainer = $('<div>');
+    const allInputsContainer = $('<div>');
 
     inputArray.map(inpuItem => {
+        const inpuItemContainer = $('<div>');
         const label = $('<label>');
         const input = $('<input>');
 
         label.text(inpuItem.label);
         input.attr('placeholder', inpuItem.placeholder);
 
-        inputContainer.append(label);
-        inputContainer.append(input);
+        inpuItemContainer.append(label);
+        inpuItemContainer.append(input);
+        inpuItemContainer.addClass("inpuItemContainer");
+        allInputsContainer.append(inpuItemContainer);
     });
 
-    form.append(inputContainer);
+    form.append(allInputsContainer);
+    allInputsContainer.addClass("allInputsContainer");
 
     return form
 }

@@ -24,7 +24,6 @@ main {
     font-family: 'Roboto', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 2px;
-    width: 100%;
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 30px;
@@ -57,7 +56,7 @@ main {
 .cardContainerFront {
     --card-padding: 1rem;
     z-index: 2;
-    top: 50%;
+    top: 55%;
     left: 5%;
 }
 
@@ -107,8 +106,12 @@ img {
         and (device-height: 667px) 
         and (-webkit-min-device-pixel-ratio: 2) {
 
+    main {
+        gap: 80px;
+    }
+
     .cardContainerFront {
-        top: 65%;
+        top: 80%;
     }
 }
 
@@ -147,6 +150,10 @@ img {
 @media screen and (min-width:1024px) {
     main {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    form {
+        align-self: center;
     }
 
     .card-section {
@@ -190,6 +197,10 @@ img {
         
         main {
             grid-template-columns: minmax(0, 1fr);
+        }
+
+        form {
+            align-self: auto;
         }
 
         .card-section {
