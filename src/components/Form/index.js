@@ -3,17 +3,17 @@ const Form = (inputArray) => {
     const allInputsContainer = $('<div>');
 
     inputArray.map(inpuItem => {
-        const inpuItemContainer = $('<div>');
+        const inputItemContainer = $('<div>');
         const label = $('<label>');
         const input = $('<input>');
 
         label.text(inpuItem.label);
         input.attr('placeholder', inpuItem.placeholder);
 
-        inpuItemContainer.append(label);
-        inpuItemContainer.append(input);
-        inpuItemContainer.addClass("inpuItemContainer");
-        allInputsContainer.append(inpuItemContainer);
+        inputItemContainer.append(label);
+        inputItemContainer.append(input);
+        inputItemContainer.addClass("inputItemContainer");
+        allInputsContainer.append(inputItemContainer);
     });
 
     form.append(allInputsContainer);

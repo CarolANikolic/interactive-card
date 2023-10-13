@@ -21,7 +21,6 @@ html, body {
 main {
     display: flex;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
     font-family: 'Space Grotesk', sans-serif;
     letter-spacing: 2px;
     display: grid;
@@ -56,7 +55,7 @@ main {
 .cardContainerFront {
     --card-padding: 1rem;
     z-index: 2;
-    top: 55%;
+    top: 65%;
     left: 5%;
 }
 
@@ -107,11 +106,12 @@ img {
         and (-webkit-min-device-pixel-ratio: 2) {
 
     main {
-        gap: 80px;
+        gap: 120px;
     }
 
     .cardContainerFront {
-        top: 80%;
+        margin-top: 0px;
+        top: 120%;
     }
 }
 
@@ -132,7 +132,7 @@ img {
         and (-webkit-min-device-pixel-ratio: 2) {
 
     .cardContainerFront {
-        top: 45%;
+        top: 55%;
     }
 }
 
@@ -142,7 +142,7 @@ img {
         and (-webkit-min-device-pixel-ratio: 2) {
 
     .cardContainerFront {
-        top: 35%;
+        top: 45%;
     }
 }
 
@@ -209,7 +209,7 @@ img {
         }
 
         .cardContainerFront {
-            top: 40%;
+            top: 45%;
             left: 20%;
         }
 
