@@ -55,7 +55,7 @@ main {
 .cardContainerFront {
     --card-padding: 1rem;
     z-index: 2;
-    top: 65%;
+    top: 70%;
     left: 5%;
 }
 
@@ -106,11 +106,11 @@ img {
         and (-webkit-min-device-pixel-ratio: 2) {
 
     main {
-        gap: 120px;
+        gap: 160px;
     }
 
     .cardContainerFront {
-        margin-top: 0px;
+        margin-top: 30px;
         top: 120%;
     }
 }

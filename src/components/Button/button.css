@@ -1,0 +1,11 @@
+.card-btn {
+    background-color: var(--very-dark-violet);
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    font-family: 'Space Grotesk', sans-serif;
+    grid-column: span 3;
+    padding: 10px 5px;
+    text-align: center;
+    width: 100%;
+}

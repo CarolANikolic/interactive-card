@@ -1,3 +1,5 @@
+import Button from "../Button/index.js";
+
 const Form = (inputArray) => {
     const form = $('<form>');
     const allInputsContainer = $('<div>');
@@ -16,6 +18,7 @@ const Form = (inputArray) => {
         allInputsContainer.append(inputItemContainer);
     });
 
+    allInputsContainer.append(Button("submit", "Confirm", "card-btn"))
     form.append(allInputsContainer);
     allInputsContainer.addClass("allInputsContainer");
 
