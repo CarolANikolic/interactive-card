@@ -1,16 +1,14 @@
-import Button from "../Button/index.js";
-
 const Form = (inputArray) => {
     const form = $('<form>');
-    const allInputsContainer = $('<div>');
+    const allInputsContainer = $('<div data-inputFields="container">');
 
-    inputArray.map(inpuItem => {
+    inputArray.map(inputItem => {
         const inputItemContainer = $('<div>');
         const label = $('<label>');
         const input = $('<input>');
 
-        label.text(inpuItem.label);
-        input.attr('placeholder', inpuItem.placeholder);
+        label.text(inputItem.label);
+        input.attr('placeholder', inputItem.placeholder);
 
         inputItemContainer.append(label);
         inputItemContainer.append(input);
@@ -18,7 +16,6 @@ const Form = (inputArray) => {
         allInputsContainer.append(inputItemContainer);
     });
 
-    allInputsContainer.append(Button("submit", "Confirm", "card-btn"))
     form.append(allInputsContainer);
     allInputsContainer.addClass("allInputsContainer");
 

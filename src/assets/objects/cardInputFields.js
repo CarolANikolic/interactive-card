@@ -4,7 +4,7 @@ const cardInputFields = [
         placeholder: "Jane Appleseed",
         value: "",
         validation: /^[A-Za-z\s.'-]+$/,
-        validationMessage: "Please, enter a valida cardholder name."
+        validationMessage: "Please, enter a valid cardholder name."
     },
 
     {
