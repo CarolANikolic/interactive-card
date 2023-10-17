@@ -22,10 +22,6 @@
     white-space: nowrap; 
 } 
 
-.inputItemContainer:nth-child(4) label {
-    display: none;
-} 
-
 .inputItemContainer:nth-child(4) input {
     grid-row-start: 2;
 } 
