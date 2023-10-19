@@ -15,22 +15,25 @@ const validateInput = (inputArray, objectArray) => {
         inputContainer.find("span").remove();
     
         if (inputValue === "") {
-            inputContainer.append("<span>Can't be empty.</span>");
+            const emptyErrorMessage = $("<span>Can't be empty.</span>");
+            inputContainer.append(emptyErrorMessage);
             isValid = false;
 
         } else if (!inputValidationExpression.test(inputValue)) {
             inputContainer.find("span").remove();
-            inputContainer.append(`<span>${inputValidationMessage}</span>`);
+            const validationMessage = $(`<span>${inputValidationMessage}</span>`);
+            inputContainer.append(validationMessage)
             isValid = false;   
 
-        } else if (inputKeyword === "month") {
+        } else if (inputKeyword === "month" && isValid) {
             monthValue = inputValue;
 
-        } else if (inputKeyword === "year") {
+        } else if (inputKeyword === "year" && isValid) {
             yearValue = inputValue
 
         } else {
-            insertInputValueIntoCard(inputKeyword, inputValue)        
+            isValid = true;  
+            insertInputValueIntoCard(inputKeyword, inputValue)   
         }
     
         if (!isValid) {
@@ -38,7 +41,7 @@ const validateInput = (inputArray, objectArray) => {
             inputContainer.find("input").addClass("failedValidation");
         } else {
             inputContainer.find("span").removeClass("errorMessage");
-            inputContainer.find("input").removeClass("failedValidation");   
+            inputContainer.find("input").removeClass("failedValidation");
         } 
     });
 
