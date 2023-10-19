@@ -1,4 +1,5 @@
 import insertInputValueIntoCard from "./insertInputValuesIntoCard.js";
+import applyValidationStyle from "./applyValidationStyle.js";
 
 const validateInput = (inputArray, objectArray) => {
     let isValid = true;
@@ -37,8 +38,7 @@ const validateInput = (inputArray, objectArray) => {
         }
     
         if (!isValid) {
-            inputContainer.find("span").addClass("errorMessage");
-            inputContainer.find("input").addClass("failedValidation");
+            applyValidationStyle(inputContainer);
         } else {
             inputContainer.find("span").removeClass("errorMessage");
             inputContainer.find("input").removeClass("failedValidation");
