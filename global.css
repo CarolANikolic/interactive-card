@@ -45,6 +45,7 @@ main {
     position: absolute;
     width: min-content;
     color: var(--white);
+    text-decoration: none;
 }
 
 .cardContainerBack > *:not(.cardContainerBack__bgImg),

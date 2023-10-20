@@ -1,3 +1,5 @@
+import splitInputValue from "./splitInputValue.js";
+
 const insertInputValueIntoCard = (inputKeyword, inputValue) => {
     
     const cardFieldsContainer = $(".card-section");
@@ -10,8 +12,14 @@ const insertInputValueIntoCard = (inputKeyword, inputValue) => {
     let cardField = matchingField;
 
     if(inputKeyword) {
-        cardField.text(inputValue)
-    }         
+        // The card number must have the value splited in 4 with a space in between
+        if(inputKeyword === "number") {
+            const inputSplited = splitInputValue(inputValue, 4)
+            cardField.text(inputSplited.join(" "))
+        }  else {
+            cardField.text(inputValue)
+        }
+    }      
 }
 
 export default insertInputValueIntoCard
