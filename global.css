@@ -48,12 +48,6 @@ main {
     text-decoration: none;
 }
 
-/* Override blue color and underline on mobile browser  */
-div.cardContainerFront span.cardContainerFront__number {
-    color: var(--white); 
-    text-decoration: none; 
-}
-
 .cardContainerBack > *:not(.cardContainerBack__bgImg),
 .cardContainerFront > *:not(.cardContainerFront__bgImg) {
     position: absolute;
