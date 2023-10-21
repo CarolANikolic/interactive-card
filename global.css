@@ -49,7 +49,7 @@ main {
 }
 
 /* Override blue color and underline on mobile browser  */
-.cardContainerFront__number {
+div.cardContainerFront span.cardContainerFront__number {
     color: var(--white); 
     text-decoration: none; 
 }
