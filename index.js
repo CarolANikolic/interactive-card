@@ -5,7 +5,8 @@ import Button from "./src/components/Button/index.js";
 
 // Add the Form into the Main Section of the DOM for User Card Details Input.
 const main = $("main");
-main.append(Form(cardInputFields));
+const cardForm = Form(cardInputFields);
+main.append(cardForm);
 
 // Enable Live Validation as the User Types for Better UX.
 const allInputs = $("input");
@@ -13,6 +14,7 @@ allInputs.on("keyup", () => {
     validateInput(allInputs, cardInputFields)
 })
 
+const test = $(".cardContainerBack")
 // Append the Button into the Form  to be Able to Submit and Make a Final Validation before Submission.
 const allInputsContainer = $('[data-inputFields="container"]');
 allInputsContainer.append(Button(
