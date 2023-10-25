@@ -4,7 +4,6 @@ import validateInput from "./src/assets/functions/validateInput.js";
 import Button from "./src/components/Button/index.js";
 import removeForm from "./src/assets/functions/removeForm.js";
 import saveOriginalCardValues from "./src/assets/functions/saveOriginalCardValues.js";
-import resetCardValues from "./src/assets/functions/resetCardValues.js";
 import FormConfirmation from "./src/components/FormConfirmation/index.js";
 
 // Add the Form into the Main Section of the DOM for User Card Details Input.
@@ -33,12 +32,7 @@ allInputsContainer.append(Button(
     validateInput(allInputs, cardInputFields)
 
     if(validateInput(allInputs, cardInputFields) === true) {
-        console.log("All fields are validated.")
-        resetCardValues(cardFields, originalCardValues)
         removeForm(cardForm)
         main.append(FormConfirmation())
-
-    } else {
-        console.log("Not all fields are validated.")
-    }
+    } 
 }))
