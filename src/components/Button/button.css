@@ -1,11 +1,16 @@
 .card-btn {
     background-color: var(--very-dark-violet);
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--white);
     border: none;
     border-radius: 8px;
-    color: var(--white);
-    font-family: 'Space Grotesk', sans-serif;
     grid-column: span 3;
     padding: 10px 5px;
     text-align: center;
     width: 100%;
+}
+
+.card-btn-smaller-size {
+    width: 50%;
+    margin: 0 auto;
 }
