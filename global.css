@@ -94,6 +94,7 @@ img {
 .cardContainerFront__name {
     left: var(--card-padding);
     top: 80%;
+    text-transform: capitalize;
 }
 
 .cardContainerFront__date {
