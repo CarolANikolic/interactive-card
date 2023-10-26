@@ -95,7 +95,7 @@ export default IconOrImage
         const inputKeyword = objectArray[i].keyword;
 ~~~
 
-- Bellow, the code snippet adds a $() on the input, the value of our callback function. The reason is that without the $(), the input is a regular JS DOM element, and since we are working with jQuery and getting the value of it, we need to convert this JS element into a jQuery object.
+- Bellow, the code snippet adds a dollar sign and parenthesis on the input, the value of our callback function. The reason is that without the a dollar sign and parenthesis, the input is a regular JS DOM element, and since we are working with jQuery and getting the value of it, we need to convert this JS element into a jQuery object.
 
 ~~~
  inputArray.each((i, input) => {
