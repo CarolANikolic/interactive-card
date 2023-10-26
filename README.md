@@ -84,7 +84,7 @@ export default IconOrImage
 ~~~
 
 ### Collection Iteration  with jQuery & Conversion of elements :
-- In comparison with JS forEach, the jQuery $.each() method can be used to iterate over items of an array or a collection of DOM elements, while forEach is used to iterate over arrays. The syntax is also different, with the $.each() the first argument of the callback function is the index, while the forEach first argument is the value.
+- In comparison with JS forEach, the jQuery each() method can be used to iterate over items of an array or a collection of DOM elements, while forEach is used to iterate over arrays. The syntax is also different, with the each() the first argument of the callback function is the index, while the forEach first argument is the value.
 
 ~~~
  inputArray.each((i, input) => {
