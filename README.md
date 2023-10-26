@@ -6,7 +6,7 @@ A project developed to pratice jQuery. Interactive Card allows you to enter your
 
 ## Responsive Design
 
-<img src="docs/screnshots/screenshot-mobile.png" width=100% alt="mobile screenshot">
+<img src="docs/screenshots/screenshot-mobile.png" width=100% alt="mobile screenshot">
 
 ## Simultaneous Validation
 
