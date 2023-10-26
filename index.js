@@ -3,16 +3,12 @@ import cardInputFields from "./src/assets/objects/cardInputFields.js";
 import validateInput from "./src/assets/functions/validateInput.js";
 import Button from "./src/components/Button/index.js";
 import removeForm from "./src/assets/functions/removeForm.js";
-import saveOriginalCardValues from "./src/assets/functions/saveOriginalCardValues.js";
 import FormConfirmation from "./src/components/FormConfirmation/index.js";
 
 // Add the Form into the Main Section of the DOM for User Card Details Input.
 const main = $("main");
 const cardForm = Form(cardInputFields);
 main.append(cardForm);
-
-const originalCardValues = saveOriginalCardValues();
-const cardFields = $(".card-section").find("span");
 
 // Enable Live Validation as the User Types for Better UX.
 const allInputs = $("input");
