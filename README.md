@@ -6,15 +6,15 @@ A project developed to pratice jQuery. Interactive Card allows you to enter your
 
 ## Responsive Design
 
-<img src="./docs/screenshots/screenshot-mobile.png" width=100% alt="mobile screenshot">
+<img src="docs/screnshots/screenshot-mobile.png" width=100% alt="mobile screenshot">
 
 ## Simultaneous Validation
 
-<img src="./docs/screenshots/screenshot-validation.png" width=100% alt="form validation">
+<img src="docs/screenshots/screenshot-validation.png" width=100% alt="form validation">
 
 ## Confirmation Page
 
-<img src="./docs/screenshots/screenshot-validated.png" width=100% alt="validation confirmed page">
+<img src="docs/screenshots/screenshot-validated.png" width=100% alt="validation confirmed page">
 
 ## Development Process
 
