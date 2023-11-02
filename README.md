@@ -1,6 +1,6 @@
 # Interactive Card
 
-A project developed to pratice jQuery. Interactive Card allows you to enter your card info while validating it simultaneously. When the information is valid, it is automatically added to the card. When all fields are properly filled, and the "Confirm" button is clicked, a confirmation page is displayed. The design of the Interactive Card is created by [FrontEnd Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw).
+A project developed to practice jQuery. Interactive Card allows you to enter your card info while validating it simultaneously. When the information is valid, it is automatically added to the card. When all fields are properly filled, and the "Confirm" button is clicked, a confirmation page is displayed. The design of the Interactive Card is created by [FrontEnd Mentor](https://www.frontendmentor.io/challenges/interactive-card-details-form-XpS8cKZDWw).
 
 ### You can access Interactive Card [here](https://validationcard.netlify.app).
 
